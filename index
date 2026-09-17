@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Song Requests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <p class="kicker">Live requests</p>
+    <h1>REQUEST&nbsp;LINE</h1>
+    <p class="subtext">Add a song or vote up one that's already here. Most-voted plays next.</p>
+  </header>
+
+  <button class="request-btn" id="openModalBtn">+ Request a Song</button>
+
+  <ul class="song-list" id="activeList"></ul>
+
+  <div id="emptyState" class="empty-state" style="display:none;">
+    <div class="display">No requests yet</div>
+    <div>Be the first — tap the button above.</div>
+  </div>
+
+  <div class="played-section" id="playedSection" style="display:none;">
+    <h2>Already played tonight</h2>
+    <ul class="song-list" id="playedList"></ul>
+  </div>
+
+  <div id="setupWarning" class="setup-warning" style="display:none;">
+    <strong>Setup needed:</strong> this page isn't connected to a database yet.
+    Open <code>firebase-config.js</code> and paste in your Firebase project keys.
+    See <code>README.md</code> for step-by-step instructions.
+  </div>
+
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <h2>Request a song</h2>
+    <label for="songInput">Song title</label>
+    <input type="text" id="songInput" placeholder="e.g. Levitating" maxlength="120" autocomplete="off" />
+    <label for="artistInput">Artist</label>
+    <input type="text" id="artistInput" placeholder="e.g. Dua Lipa" maxlength="120" autocomplete="off" />
+    <div class="error-text" id="formError"></div>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="cancelBtn">Cancel</button>
+      <button class="btn-primary" id="submitBtn">Add request</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
