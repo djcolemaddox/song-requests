@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>DJ Controls — Song Requests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="dj-badge">DJ CONTROLS</span>
+    <h1>SET&nbsp;LIST</h1>
+    <p class="subtext">Mark songs played as you go. Reset the board once the dance ends.</p>
+  </header>
+
+  <p class="session-info" id="sessionInfo"></p>
+
+  <ul class="song-list" id="activeList"></ul>
+
+  <div id="emptyState" class="empty-state" style="display:none;">
+    <div class="display">No requests yet</div>
+    <div>Songs will appear here as students add them.</div>
+  </div>
+
+  <div class="played-section" id="playedSection" style="display:none;">
+    <h2>Played tonight</h2>
+    <ul class="song-list" id="playedList"></ul>
+  </div>
+
+  <button class="danger-btn" id="resetBtn">Clear board for next dance</button>
+
+  <div id="setupWarning" class="setup-warning" style="display:none;">
+    <strong>Setup needed:</strong> this page isn't connected to a database yet.
+    Open <code>firebase-config.js</code> and paste in your Firebase project keys.
+    See <code>README.md</code> for step-by-step instructions.
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="dj.js"></script>
+</body>
+</html>
