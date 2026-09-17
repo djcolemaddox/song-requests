@@ -4,10 +4,10 @@
 // Security is handled separately by the Firestore Rules (see README.md).
 
 export const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
-  authDomain: "PASTE_YOUR_AUTH_DOMAIN_HERE",
-  projectId: "PASTE_YOUR_PROJECT_ID_HERE",
-  storageBucket: "PASTE_YOUR_STORAGE_BUCKET_HERE",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID_HERE",
-  appId: "PASTE_YOUR_APP_ID_HERE",
+  apiKey: "AIzaSyAyzpbAp1WuO5p04wCxw1vRTn1To-9JuJE",
+  authDomain: "dance-requests-75.firebaseapp.com",
+  projectId: "dance-requests-75",
+  storageBucket: "dance-requests-75.firebasestorage.app",
+  messagingSenderId: "37100040062",
+  appId: "1:37100040062:web:22fc15029f161ee2700d2f",
 };
